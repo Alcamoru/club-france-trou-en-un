@@ -8,25 +8,25 @@
 {% endblock %}
 
 {% block content %}
-<h1>Ajouter un trou en un</h1>
+    <h1>Ajouter un trou en un</h1>
     <form method="post">
-    {% csrf_token %}
-    <p>
-        <label for="club">Club</label>
-        <input type="text" id="club" name="club">
-    </p>
+        {% csrf_token %}
         <p>
-        <label for="date">Date de réalisation</label>
-        <input type="date" id="date" name="date">
-    </p>
+            <label for="club">Club</label>
+            <input type="text" id="club" name="club">
+        </p>
         <p>
-        <label for="localisation">Localisation</label>
-        <input type="text" id="localisation" name="localisation">
-    </p>
+            <label for="date">Date de réalisation</label>
+            <input type="date" id="date" name="date">
+        </p>
         <p>
-        <label for="point">Drapeau</label>
-        <input type="number" id="point" name="point">
-    </p>
-    <button type="submit">Ajouter</button>
+            <label for="localisation">Localisation</label>
+            <input type="text" id="localisation" name="localisation">
+        </p>
+        <p>
+            <label for="point">Drapeau</label>
+            <input type="number" id="point" name="point">
+        </p>
+        <button type="submit">Ajouter</button>
     </form>
 {% endblock %}

@@ -15,7 +15,6 @@ def info(request):
 
 
 def signup(request: HttpRequest):
-
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -23,11 +22,11 @@ def signup(request: HttpRequest):
         last_name = request.POST.get("lastname")
         birthdate = request.POST.get("birthdate")
         email = request.POST.get("email")
-
-        member = Member.objects.create_user(username=username, password=password, first_name=first_name,
-                                            last_name=last_name, birth=birthdate, email=email)
-        login(request, member)
-        return redirect("index")
+        if email and password:
+            member = Member.objects.create_user(username=username, password=password, first_name=first_name,
+                                                last_name=last_name, birth=birthdate, email=email)
+            login(request, member)
+            return redirect("index")
 
     return render(request, "members/signup.html")
 

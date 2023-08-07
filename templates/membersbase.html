@@ -6,49 +6,53 @@
 <html lang="fr">
 <head>
     <link rel="stylesheet" href="{% static 'css/members.css' %}">
-{% block header %}
+    {% block header %}
 
-{% endblock %}
+    {% endblock %}
 </head>
 
 <body>
-<header>
-    <div class="menu">
-                <img class="logo" src="{% static 'medias/Logo.png' %}" alt="">
-                <ul>
-                    <li><a href="{% url 'index' %}">Accueil</a></li>
-                    <li><a href="#">A propos de nous</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Statistiques</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'info' %}">{{ user.username }}</a></li>
-                        <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">S'inscrire</a></li>
-                        <li><a href="{% url 'login' %}">Se connecter</a></li>
-                    {% endif %}
-                </ul>
+<div class="members-content">
+    <header>
+        <div class="menu">
+            <img class="logo" src="{% static 'medias/Logo.png' %}" alt="">
+            <ul>
+                <li><a href="{% url 'index' %}">Accueil</a></li>
+                <li><a href="#">A propos de nous</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Statistiques</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'info' %}">{{ user.username }}</a></li>
+                    <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
+                {% else %}
+                    <li><a href="{% url 'signup' %}">S'inscrire</a></li>
+                    <li><a href="{% url 'login' %}">Se connecter</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+</div>
+
+<footer>
+    <div class="social-medias">
+        <a href="mailto:info@clubfrance-trouenun.com"><img src="{% static 'medias/email.png' %}" alt=""></a>
+        <a href="https://www.linkedin.com/company-beta/11198074/"><img src="{% static 'medias/linkedin.png' %}" alt=""></a>
+        <a href="http://www.facebook.com/CFtrouenun"><img src="{% static 'medias/facebook.png' %}" alt=""></a>
+        <a href="http://instagram.com/CFtrouenun"><img src="{% static 'medias/instagram.png' %}" alt=""></a>
     </div>
-</header>
-{% block content %}
-
-{% endblock %}
-
-    <footer>
-        <div class="social-medias">
-            <a href="mailto:info@clubfrance-trouenun.com"><img src="{% static 'medias/email.png' %}" alt=""></a>
-            <a href="https://www.linkedin.com/company-beta/11198074/"><img src="{% static 'medias/linkedin.png' %}" alt=""></a>
-            <a href="http://www.facebook.com/CFtrouenun"><img src="{% static 'medias/facebook.png' %}" alt=""></a>
-            <a href="http://instagram.com/CFtrouenun"><img src="{% static 'medias/instagram.png' %}" alt=""></a>
-        </div>
-        <div class="footer-links">
-            <div><p>Vous en rêvez</p></div>
-            <div><p>Club de Golf</p></div>
-            <div><p>Entreprise</p></div>
-            <div><p>Vidéos</p></div>
-            <div><p>Nouveau Trou en 1</p></div>
-            <div><p>Mentions légales - CGU</p></div>
-        </div>
-    </footer>
+    <div class="footer-links">
+        <div><p>Vous en rêvez</p></div>
+        <div><p>Club de Golf</p></div>
+        <div><p>Entreprise</p></div>
+        <div><p>Vidéos</p></div>
+        <div><p>Nouveau Trou en 1</p></div>
+        <div><p>Mentions légales - CGU</p></div>
+    </div>
+</footer>
 
 </body>

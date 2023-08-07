@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('holes', '0002_holeinone_author_alter_holeinone_date'),
     ]
