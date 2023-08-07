@@ -1,0 +1,295 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/static/Outfit-Medium.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, serif;
+}
+
+h2 {
+    color: seagreen;
+}
+
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.header-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../medias/FC4BAA53-FEDD-488C-A335-1190839406FE.jpeg");
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+header {
+    padding: 20px;
+}
+
+.menu {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+    margin: 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo {
+    height: 6%;
+    width: 6%;
+    padding: 0;
+    margin: 0 50px 0 50px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 8%;
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+.presentation em {
+    font-size: 1.5em;
+}
+
+.join-button {
+    margin: 2.5% 2.5% 10% 2.5%;
+    padding: 15px;
+    border: solid white;
+    border-radius: 35px;
+}
+
+main {
+    text-align: center;
+    color: black;
+}
+
+.club-infos {
+    padding: 8% 8% 4% 8%;
+}
+
+.club-infos .national-club {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.club-infos .why-share {
+    margin: 2%;
+}
+
+.members-wrapper div {
+    border: solid darkslategrey;
+    border-radius: 25px;
+    padding: 10px 0 10px 0;
+    color: white;
+}
+
+.members-wrapper .gold-members {
+    background-color: #f7bf40;
+}
+
+.members-wrapper .platinium-members {
+    background-color: lightslategray;
+}
+
+.members-wrapper .titanium-members {
+    background-color: teal;
+}
+
+.members-wrapper {
+    margin: 4% auto 4% auto;
+    width: 60%;
+    grid-gap: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quotes {
+    font-size: 5em;
+    color: lightslategray;
+}
+
+.club-direction {
+    margin-top: 2%;
+    font-weight: 100;
+    color: lightslategray;
+}
+
+.explanation {
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
+
+.sep-line {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partners-title {
+    margin: 4%;
+}
+
+.partners-wrapper div img {
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+}
+
+.partners-wrapper {
+    margin: 4% 15% 4% 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.lucrative-title {
+    margin: 4%;
+}
+
+.first-lucrative-title {
+    margin-bottom: 3%;
+}
+
+.reference {
+    margin: 4%;
+}
+
+.reference iframe {
+    margin: 2%;
+}
+
+.if-you-dont {
+    width: 60%;
+    margin: 4% auto 4% auto;
+}
+
+.contact {
+    padding: 5% 0 5% 0;
+    width: 60%;
+    margin: 4% auto 4% auto;
+    background-color: seagreen;
+    border-radius: 20px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.contact div {
+    margin-top: 2%;
+}
+
+.contact img {
+    height: 70px;
+}
+
+.email-input {
+    padding: 1% 4% 1% 4%;
+    border-radius: 15px;
+    border: none;
+}
+
+.contact button {
+    text-decoration: none;
+    background-color: white;
+    padding: 1% 4% 1% 4%;
+    border-radius: 15px;
+    border: none;
+}
+
+footer {
+    padding: 20px;
+    background-color: lightslategray;
+}
+
+.social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4% auto 4% auto;
+}
+
+.social-medias a {
+    margin: 0 2% 0 2%;
+
+}
+
+.social-medias img {
+    filter: invert(1);
+    width: 50px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.links div {
+    margin: 2%;
+}
+
+.menu-signup {
+    background-color: seagreen;
+    padding: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.footer-links div {
+    margin: 0 15px 0 15px
+}

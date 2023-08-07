@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/static/Outfit-Medium.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, serif;
+}
+
+body {
+    background-color: red;
+}
+
+footer {
+    padding: 20px;
+    background-color: lightslategray;
+}
+
+.social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4% auto 4% auto;
+}
+
+.social-medias a {
+    margin: 0 2% 0 2%;
+
+}
+
+.social-medias img {
+    filter: invert(1);
+    width: 50px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.links div {
+    margin: 2%;
+}
+
+.menu-signup {
+    background-color: seagreen;
+    padding: 20px;
+}
+
+.footer-links {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}

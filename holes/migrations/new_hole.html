@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <meta charset="UTF-8">
+    <title>Club France Trou en Un</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="back">
+        <a href="{% url 'index' %}">
+            <p>retour</p>
+        </a>
+    </div>
+    {% if user.is_authenticated %}
+        <h1>Ajouter un trou en un</h1>
+        <form method="post">
+            <p>
+                <label for="club">Club</label>
+                <input type="text" id="club" name="club">
+            </p>
+            <p>
+                <label for="date">Nom d'utilisateur</label>
+                <input type="date" id="date" name="date">
+            </p>
+            <p>
+                <label for="location">Nom d'utilisateur</label>
+                <input type="text" id="location" name="location">
+            </p>
+            <p>
+                <label for="date">Nom d'utilisateur</label>
+                <input type="date" id="date" name="date">
+            </p>
+                        <p>
+                <label for="date">Nom d'utilisateur</label>
+                <input type="date" id="date" name="date">
+            </p>
+                <button type="submit">S'inscrire</button>
+        </form>
+    {% else %}
+    {% endif %}
+
+{% endblock %}

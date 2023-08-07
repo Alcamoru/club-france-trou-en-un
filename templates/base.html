@@ -1,0 +1,34 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{% block header %}
+
+{% endblock %}
+</head>
+
+<body>
+{% block content %}
+
+{% endblock %}
+
+    <footer>
+        <div class="social-medias">
+            <a href="mailto:info@clubfrance-trouenun.com"><img src="{% static 'medias/email.png' %}" alt=""></a>
+            <a href="https://www.linkedin.com/company-beta/11198074/"><img src="{% static 'medias/linkedin.png' %}" alt=""></a>
+            <a href="http://www.facebook.com/CFtrouenun"><img src="{% static 'medias/facebook.png' %}" alt=""></a>
+            <a href="http://instagram.com/CFtrouenun"><img src="{% static 'medias/instagram.png' %}" alt=""></a>
+        </div>
+        <div class="footer-links">
+            <div><p>Vous en rêvez</p></div>
+            <div><p>Club de Golf</p></div>
+            <div><p>Entreprise</p></div>
+            <div><p>Vidéos</p></div>
+            <div><p>Nouveau Trou en 1</p></div>
+            <div><p>Mentions légales - CGU</p></div>
+        </div>
+    </footer>
+
+</body>

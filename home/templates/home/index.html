@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <meta charset="UTF-8">
+    <title>Club France Trou en Un</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="header-bg">
+        <header>
+            <div class="menu">
+                <img class="logo" src="{% static 'medias/Logo.png' %}" alt="">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">A propos de nous</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Statistiques</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="">{{ user.username }}</a></li>
+                        <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
+                    {% else %}
+                        <li><a href="{% url 'signup' %}">S'inscrire</a></li>
+                        <li><a href="{% url 'login' %}">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="presentation">
+                <h1 class="title"><strong>CLUB FRANCE <br>TROU EN UN</strong></h1>
+                <em>Vous avez réalisé un Trou-En-1 ?</em>
+                <div class="join-button">
+                    Devenez le 741e membre
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <main>
+        <div class="club-infos">
+            <h2 class="national-club">Le <strong>CLUB NATIONAL</strong><br>
+                des joueurs professionnels et amateurs <br>
+                ayant réalisé un <strong>TROU EN UN</strong></h2>
+            <p class="why-share">Partagez votre exploit et rentrez dans le Hall of Fame français du Trou-en-un !</p>
+            <div class="members-wrapper">
+                <div class="titanium-members">
+                    <h3>Membres <br>Titanium</h3>
+                    <p class="members-number">23</p>
+                </div>
+                <div class="platinium-members">
+                    <h3>Membres <br>Platinium</h3>
+                    <p class="members-number">294</p>
+                </div>
+                <div class="gold-members">
+                    <h3>Membres <br>Gold</h3>
+                    <p class="members-number">375</p>
+                </div>
+
+            </div>
+            <div class="quotes">“</div>
+            <div class="explanation">La réalisation d’un Trou-en-1 est un moment exceptionnel et éphémère dans une vie
+                de
+                golfeur. CLUB France TROU EN UN a été créé pour être un lieu de partage et de vie autour des histoires
+                toutes aussi incroyables les unes que les autres que sont les réalisations d’un Trou-en-1. Plaisir et
+                promotion du Golf sont les objectifs simples et fédérateurs du Club. Nos membres sont des passionnés de
+                golf qui partagent leur expérience du Trou-en-1 et représentent leur Club pour en promouvoir les
+                exploits
+                au delà de leurs régions !
+            </div>
+            <p class="club-direction">— La direction du club</p>
+        </div>
+        <hr class="sep-line">
+        <h2 class="partners-title">PARTENAIRES ET FOURNISSEURS</h2>
+        <hr class="sep-line">
+        <div class="partners-wrapper">
+            <div><img src="{% static 'medias/partners/59FE8E6F-705E-44C6-ACE1-44A8BF6DBD84.jpeg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/FE4F6097-2231-47A0-AB40-2E7101258745.jpeg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+Monsieur+Golf+Tour.jpg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+ANAHITA.jpg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo_Verygolftrip+JPG.jpg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/LOGO+FAIRWAYS.png ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/8776116E-5217-46F0-9C10-C5E5092CC401.png ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/43FE1020-8269-41DA-B7D8-23D823C68CA7.png ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+Golf+Technic.jpg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+Golf+Stars.jpg ' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/LOGO+JDG.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/logo+FFGOLF.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/evian.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+Hubert+Privé.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/LOGO+MDG.png' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/les+balles+blanches.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/FONDATION+PONTOISE.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/Logo+Greenmark.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/logo+handigolf.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/UDSP.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/logo+svs.png' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/LOGO+ARTHRISTIS.jpg' %}" alt=""></div>
+            <div><img src="{% static 'medias/partners/LOGO+SWING.jpg' %}" alt=""></div>
+        </div>
+        <hr class="sep-line">
+        <div class="lucrative-title">
+            <h2 class="first-lucrative-title">CLUB À BUT NON LUCRATIF <br>POUR PROMOUVOIR LE GOLF ET SOUTENIR DES
+                ACTIONS CARITATIVES.</h2>
+            <h2>LE NOMBRE FAIT LA FORCE, REJOIGNEZ-NOUS !</h2>
+        </div>
+        <hr class="sep-line">
+        <div class="reference">
+            <h2 class="reference-title">NOS 2 TROUS EN 1 DE REFERENCE… <br>
+                LE PRESENT AVEC TIGER… ET LE FUTUR AVEC LDRIC !</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9sjvMUv58uU"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2CVURQdFILk"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+
+            </iframe>
+        </div>
+        <hr class="sep-line">
+        <p class="if-you-dont">Et si vous n'avez pas encore réalisé un tel exploit mais que vous en rêvez ou que vous
+            souhaitez
+            être informé de l'actualité du Club et des trous en 1, vous êtes le (ou la) bienvenu(e).
+            Enregistrez vous pour recevoir nos communications par mail. </p>
+        <hr class="sep-line">
+        <div class="contact">
+            <img src="{% static 'medias/poster.png' %}" alt="">
+
+            <h3>Recevez nos news par email</h3>
+            <div>
+                <label>
+                    <input class="email-input" type="email" placeholder="Adresse Email">
+                    <button>Envoyer</button>
+                </label>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
