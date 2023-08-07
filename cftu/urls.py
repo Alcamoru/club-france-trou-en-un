@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path
 
 from cftu import settings
+from holes.views import create
 from home.views import index
 from members.views import signup, logout_user, login_user, info
 
@@ -28,7 +29,8 @@ urlpatterns = [
     path('info', info, name='info'),
     path('login', login_user, name="login"),
     path('signup', signup, name="signup"),
-    path('logout', logout_user, name="logout")
+    path('logout', logout_user, name="logout"),
+    path('create_hole', create, name="create")
 ]
 
 if settings.DEBUG:
