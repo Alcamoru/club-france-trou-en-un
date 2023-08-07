@@ -7,6 +7,13 @@ from django.shortcuts import render, redirect
 Member = get_user_model()
 
 
+def info(request):
+    if request.user:
+        return render(request, "members/info.html")
+    else:
+        return redirect("index")
+
+
 def signup(request: HttpRequest):
 
     if request.method == "POST":

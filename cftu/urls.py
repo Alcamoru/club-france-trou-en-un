@@ -20,11 +20,12 @@ from django.urls import path
 
 from cftu import settings
 from home.views import index
-from members.views import signup, logout_user, login_user
+from members.views import signup, logout_user, login_user, info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
+    path('info', info, name='info'),
     path('login', login_user, name="login"),
     path('signup', signup, name="signup"),
     path('logout', logout_user, name="logout")

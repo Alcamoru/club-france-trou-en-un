@@ -1,18 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'membersbase.html' %}
 {% load static %}
 
 {% block header %}
     <meta charset="UTF-8">
     <title>Club France Trou en Un</title>
-    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="back">
-        <a href="{% url 'index' %}">
-            <p>retour</p>
-        </a>
-    </div>
     <h1>Se connecter</h1>
     <form method="post">
     {% csrf_token %}
@@ -26,5 +20,4 @@
     </p>
     <button type="submit">Connexion</button>
     </form>
-
 {% endblock %}

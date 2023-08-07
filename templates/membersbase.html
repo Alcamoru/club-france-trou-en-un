@@ -5,12 +5,31 @@
 <!--suppress ALL -->
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="{% static 'css/members.css' %}">
 {% block header %}
 
 {% endblock %}
 </head>
 
 <body>
+<header>
+    <div class="menu">
+                <img class="logo" src="{% static 'medias/Logo.png' %}" alt="">
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="#">A propos de nous</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Statistiques</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'info' %}">{{ user.username }}</a></li>
+                        <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
+                    {% else %}
+                        <li><a href="{% url 'signup' %}">S'inscrire</a></li>
+                        <li><a href="{% url 'login' %}">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+    </div>
+</header>
 {% block content %}
 
 {% endblock %}
