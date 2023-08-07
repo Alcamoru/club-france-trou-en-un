@@ -18,7 +18,7 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Statistiques</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="">{{ user.username }}</a></li>
+                        <li><a href="{% url 'info' %}">{{ user.username }}</a></li>
                         <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
                     {% else %}
                         <li><a href="{% url 'signup' %}">S'inscrire</a></li>
