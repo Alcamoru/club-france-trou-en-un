@@ -8,35 +8,38 @@
 
 {% block content %}
     <h1 class="page-title">Informations</h1>
-    <a class="create-hole" href="{% url 'create' %}"><button>Ajouter un trou en un</button></a>
+    <h2>Vous avez réalisé {{ holes.count }} trous en 1</h2>
+    <a class="create-hole" href="{% url 'create' %}">
+        <button>Ajouter un trou en un</button>
+    </a>
     <div class="user-infos">
         <div>
             <p>Nom d'utilisateur</p>
             <p class="info">{{ user.username }}</p>
         </div>
         {% if user.first_name %}
-        <div>
-            <p>Prénom</p>
-            <p class="info">{{ user.first_name }}</p>
-        </div>
-    {% endif %}
-    {% if user.last_name %}
-        <div>
-            <p>Nom</p>
-            <p class="info">{{ user.last_name }}</p>
-        </div>
-    {% endif %}
-    {% if user.email %}
-        <div>
-            <p>Email</p>
-            <p class="info">{{ user.email }}</p>
-        </div>
-    {% endif %}
+            <div>
+                <p>Prénom</p>
+                <p class="info">{{ user.first_name }}</p>
+            </div>
+        {% endif %}
+        {% if user.last_name %}
+            <div>
+                <p>Nom</p>
+                <p class="info">{{ user.last_name }}</p>
+            </div>
+        {% endif %}
+        {% if user.email %}
+            <div>
+                <p>Email</p>
+                <p class="info">{{ user.email }}</p>
+            </div>
+        {% endif %}
         {% if user.birth %}
-        <div>
-            <p>Date de naissance</p>
-            <p class="info">{{ user.birth }}</p>
-        </div>
-    {% endif %}
+            <div>
+                <p>Date de naissance</p>
+                <p class="info">{{ user.birth }}</p>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
