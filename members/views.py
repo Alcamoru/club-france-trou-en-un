@@ -8,7 +8,13 @@ Member = get_user_model()
 
 
 def info(request):
+    user = request.user
     if request.user:
+        username = user.username
+        first_name = user.first_name
+        last_name = user.last_name
+        user_email = user.email
+        birth = user.birth
         return render(request, "members/info.html")
     else:
         return redirect("index")

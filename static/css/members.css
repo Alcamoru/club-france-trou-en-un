@@ -26,8 +26,37 @@ form {
     flex-direction: column;
 }
 
+.create-hole {
+    width: max-content;
+    display: block;
+    margin: 2% auto 2% auto;
+}
+
+.create-hole button{
+    background-color: seagreen;
+    border: 1px solid black;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.user-infos {
+    width: 25vw;
+    height: 15vh;
+    margin: 0 auto 10% auto;
+}
+.user-infos div p {
+    display: inline-block;
+}
+
+.info {
+    float: right;
+}
+
 form div input {
-    padding: 7px 0 7px 0;
+    padding: 7px 0 7px 10px;
     display: block;
     width: 100%;
     overflow: hidden;

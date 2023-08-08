@@ -26,21 +26,68 @@ form {
     flex-direction: column;
 }
 
-form div input {
+.create-hole {
+    width: max-content;
     display: block;
+    margin: 2% auto 2% auto;
+}
+
+.create-hole button{
+    background-color: seagreen;
+    border: 1px solid black;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.user-infos {
+    background-color: red;
+    width: 30vw;
+    margin: 0 auto 10% auto;
+}
+.user-infos div p {
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+.info {
+
+}
+
+form div input {
+    padding: 7px 0 7px 10px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid grey;
+    transition: border-radius 0.4s ease-in-out;
+}
+
+form div input:focus {
+        border-radius: 13px;
 }
 
 form div label {
         display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 100%;
 }
 
 form div {
+    margin: 0.5%;
     width: 60%;
-    background-color: red;
+}
+
+form button {
+    margin: 2%;
+    background-color: seagreen;
+    border: 1px solid black;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    border-radius: 13px;
+    cursor: pointer;
 }
 
 
@@ -89,7 +136,7 @@ header {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: black;
+    background-color: white;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
