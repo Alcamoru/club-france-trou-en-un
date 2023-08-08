@@ -2,20 +2,20 @@ from django.contrib.auth import get_user_model, login, logout, authenticate
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
 
+from holes.models import HoleInOne
+from .models import Member
+
 # Create your views here.
 
-Member = get_user_model()
+MemberModel: Member = get_user_model()
 
 
 def info(request):
     user = request.user
     if request.user:
-        username = user.username
-        first_name = user.first_name
-        last_name = user.last_name
-        user_email = user.email
-        birth = user.birth
-        return render(request, "members/info.html")
+        member = MemberModel.objects.get(username=user.username)
+        user_holes = HoleInOne.objects.filter(author=member)
+        return render(request, "members/info.html", context={"holes": user_holes})
     else:
         return redirect("index")
 

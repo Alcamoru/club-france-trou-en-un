@@ -60,7 +60,7 @@ header {
 }
 
 h2 {
-        font-size: 2em;
+    font-size: 2em;
     font-weight: 100;
     color: seagreen;
     text-align: center;
@@ -68,7 +68,7 @@ h2 {
 }
 
 main {
-        padding: 8% 8% 4% 8%;
+    padding: 8% 8% 4% 8%;
 }
 
 .promotion {
@@ -100,7 +100,6 @@ main {
 }
 
 
-
 body {
     color: white;
     padding: 0;
@@ -109,7 +108,7 @@ body {
 
 
 .presentation {
-    margin: 5%;
+    margin: 5% 5% 8% 5%;
     text-align: center;
 }
 
