@@ -14,10 +14,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../medias/FC4BAA53-FEDD-488C-A335-1190839406FE.jpeg");
     background-size: cover;
     background-position: center;
-}
-
-.body {
-
+    padding: 20px;
 }
 
 form {
@@ -96,10 +93,6 @@ h1 {
 
 body {
     color: black;
-}
-
-header {
-    padding: 20px;
 }
 
 .menu {

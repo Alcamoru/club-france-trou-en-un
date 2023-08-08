@@ -20,7 +20,7 @@ from django.urls import path
 
 from cftu import settings
 from holes.views import create
-from home.views import index
+from home.views import index, about_us
 from members.views import signup, logout_user, login_user, info
 
 urlpatterns = [
@@ -30,7 +30,8 @@ urlpatterns = [
     path('login', login_user, name="login"),
     path('signup', signup, name="signup"),
     path('logout', logout_user, name="logout"),
-    path('create_hole', create, name="create")
+    path('create-hole', create, name="create"),
+    path('about-us', about_us, name="about-us")
 ]
 
 if settings.DEBUG:

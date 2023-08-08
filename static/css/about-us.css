@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Outfit";
+    src: url("fonts/static/Outfit-Medium.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, serif;
+}
+
+.about-us-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../medias/about-us-bg.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+}
+
+header {
+    color: white;
+    padding: 20px;
+}
+
+.menu {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    float: left;
+    margin: 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+h2 {
+        font-size: 2em;
+    font-weight: 100;
+    color: seagreen;
+    text-align: center;
+
+}
+
+main {
+        padding: 8% 8% 4% 8%;
+}
+
+.promotion {
+    margin: 3% 15% 2% 15%;
+    color: black;
+    display: flex;
+}
+
+.promotion div {
+    margin: 5%;
+}
+
+.promotion div h3 {
+    color: seagreen;
+    font-weight: bold;
+
+}
+
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo {
+    height: 6%;
+    width: 6%;
+    padding: 0;
+    margin: 0 50px 0 50px;
+}
+
+
+
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+
+.presentation {
+    margin: 5%;
+    text-align: center;
+}
+
+.presentation p {
+    font-size: 24px;
+}
+
+.presentation h1 {
+    font-size: 68px;
+}
+
+footer {
+    padding: 20px;
+    background-color: lightslategray;
+}
+
+.social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4% auto 4% auto;
+}
+
+.social-medias a {
+    margin: 0 2% 0 2%;
+
+}
+
+.social-medias img {
+    filter: invert(1);
+    width: 50px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.links div {
+    margin: 2%;
+}
+
+.menu-signup {
+    background-color: seagreen;
+    padding: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.footer-links div {
+    margin: 0 15px 0 15px
+}
