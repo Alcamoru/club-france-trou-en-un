@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/about-us.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="about-us-bg">
+        <header>
+            <div class="menu">
+                <img class="logo" src="{% static 'medias/Logo.png' %}" alt="">
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'about-us' %}">A propos de nous</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Statistiques</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'info' %}">{{ user.username }}</a></li>
+                        <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
+                    {% else %}
+                        <li><a href="{% url 'signup' %}">S'inscrire</a></li>
+                        <li><a href="{% url 'login' %}">Se connecter</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="presentation">
+                <p><em>Promouvoir le</em></p>
+                <h1>Golf</h1>
+                <p><em>en France... sous l'angle du Trou en 1 !</em></p>
+            </div>
+        </header>
+    </div>
+
+    <main>
+    <h2>Promouvoir les joueurs, les club, et le golf en France</h2>
+    <div class="promotion">
+        <div>
+            <h3>Le Club</h3>
+            <p>CLUB France TROU EN UN est la première communauté nationale en France de joueurs professionnels et
+                amateurs ayant réalisé un Trou-en-1. Plus qu’une communauté, le Club est un vecteur de communication
+                sur le thème du Trou-en-1, ouvert à tous les joueurs et à tous les Clubs.</p>
+        </div>
+        <div>
+            <h3>Mission</h3>
+            <p>Né pour participer à la promotion du golf en France sous l’angle du Trou-en 1, CLUB France TROU EN UN a
+                pour mission de créer une dynamique nationale autour de ces exploits et de participer à l’animation des
+                Clubs en proposant des Challenges Trou-en-1 sur les compétitions, notamment celles soutenant des
+                actions caritatives.</p>
+        </div>
+        <div>
+            <h3>Responsabilité sociale</h3>
+            <p>CLUB France TROU EN UN souhaite participer au développement de l’économie sociale et solidaire.
+                Le Club ne recherche pas le profit mais une redistribution de ses revenus aux joueurs et aux Clubs
+                au travers de sa mission. La gouvernance du Club protège cet état d’esprit promu par ses fondateurs.</p>
+        </div>
+    </div>
+    </main>
+
+{% endblock %}
