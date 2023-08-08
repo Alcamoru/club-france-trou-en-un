@@ -7,36 +7,34 @@
 {% endblock %}
 
 {% block content %}
-    <h1>S'inscrire</h1>
+    <h1 class="page-title">Formulaire d'inscription</h1>
     <form method="post">
-    {% csrf_token %}
-    <p>
-        <label for="username">Nom d'utilisateur</label>
-        <input type="text" id="username" name="username">
-    </p>
-        <p>
-        <label for="password">Nom d'utilisateur</label>
-        <input type="password" id="password" name="password">
-    </p>
-                <p>
-        <label for="email">Nom d'utilisateur</label>
-        <input type="email" id="email" name="email">
-    </p>
-        </p>
-        <p>
-        <label for="firstname">Nom d'utilisateur</label>
-        <input type="text" id="firstname" name="firstname">
-    </p>
-        </p>
-        <p>
-        <label for="lastname">Nom d'utilisateur</label>
-        <input type="text" id="lastname" name="lastname">
-    </p>
-        <p>
-        <label for="birthdate">Nom d'utilisateur</label>
-        <input type="date" id="birthdate" name="birthdate">
-    </p>
-    <button type="submit">S'inscrire</button>
+        {% csrf_token %}
+        <div>
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" name="firstname">
+        </div>
+        <div>
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" name="lastname">
+        </div>
+        <div>
+            <label for="birthdate">Date de naissance</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </div>
+        <button type="submit">S'inscrire</button>
     </form>
 
 {% endblock %}

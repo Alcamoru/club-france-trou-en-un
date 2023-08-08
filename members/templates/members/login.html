@@ -7,17 +7,17 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Se connecter</h1>
+    <h1 class="page-title">Se connecter</h1>
     <form method="post">
-    {% csrf_token %}
-    <p>
-        <label for="username">Nom d'utilisateur</label>
-        <input type="text" id="username" name="username">
-    </p>
-        <p>
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="password">
-    </p>
-    <button type="submit">Connexion</button>
+        {% csrf_token %}
+        <div>
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Connexion</button>
     </form>
 {% endblock %}
